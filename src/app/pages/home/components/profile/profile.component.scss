@@ -30,9 +30,7 @@ $grid-gutter: 20px;
 .grid-item {
   padding: 20px;
   text-align: center;
-  &:nth-child(odd) {
-   
-  }
+ 
   small {
     display: block;
     line-height: 2.5em;
