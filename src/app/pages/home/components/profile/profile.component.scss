@@ -1,46 +1,53 @@
-.testimonial-wrapper {
-  display: flex;
 
+
+.bg_imag{
+
+  background-image: url("/assets/images/snow-man.png");
+      background-repeat: no-repeat;
+      background-position: 0 30px;
+      background-size: 100%;
+}
+
+
+$grid-columns: 2;
+$grid-gutter: 20px;
+
+.grid-container {
+  display: grid;
   background-color: #847d7d14;
-  background-size: 500px;
-
-  .main {
-    background-image: url("/assets/images/snow-man.png");
-    background-repeat: no-repeat;
-    background-position: 0 30px;
-    background-size: 40%;
-    display: flex;
-    padding-top: 25px;
-
-    > div {
-      flex-basis: 50%;
-      box-sizing: border-box;
-      &:last-child {
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-        padding: 15px;
-      }
-      > img {
-        width: 80%;
-        object-fit: contain;
-      }
-
-      small {
-        display: block;
-        line-height: 2.5em;
-        color: #9e9e9ebd;
-      }
-
-      .sign {
-        margin-top: 50px;
-      }
-
-      h1 {
-        color: red;
-        font-weight: 400;
-        font-size: 38px;
-      }
-    }
+  grid-template-columns: repeat($grid-columns, 1fr);
+  grid-gap: $grid-gutter;
+  
+  @media only screen and (max-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
   }
+  
+  @media only screen and (max-width: 480px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.grid-item {
+  padding: 20px;
+  text-align: center;
+  &:nth-child(odd) {
+   
+  }
+  small {
+    display: block;
+    line-height: 2.5em;
+    color: #9e9e9ebd;
+  }
+
+  .sign {
+    margin-top: 50px;
+  }
+
+  h1 {
+    color: red;
+    font-weight: 400;
+    font-size: 38px;
+  }
+
+
 }

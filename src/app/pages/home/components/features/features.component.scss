@@ -1,29 +1,34 @@
-.app-wrapper {
+
+
+.bg_imag{
+
   background-image: url("/assets/images/snow-q.png"),
     url("/assets/images/snow-w.png");
   background-repeat: no-repeat, no-repeat;
-  background-position: 100px -75px, 100% 110%;
-  background-size: 550px;
 }
-.container > div {
-  padding: 140px 15px;
-}
-.music-player-wrapper {
-  display: flex;
-  justify-content: space-between;
-  > div {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    flex-basis: 50%;
 
-    img {
-      margin: 12% 28%;
-    }
+$grid-columns: 2;
+$grid-gutter: 20px;
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat($grid-columns, 1fr);
+  grid-gap: $grid-gutter;
+  
+  @media only screen and (max-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  @media only screen and (max-width: 480px) {
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 
-h1 {
+.grid-item {
+ 
+  padding: 20px;
+  text-align: center;
+  h1 {
   color: #43a9ff;
   font-size: 38px;
   font-weight: 500;
@@ -34,28 +39,7 @@ small {
   line-height: 2.5em;
   color: #9e9e9ebd;
 }
-
-.chat-wrapper {
-  display: flex;
-  justify-content: space-between;
-  > div {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    flex-basis: 40%;
-
-    h1 {
-      color: #43a9ff;
-      font-size: 38px;
-      font-weight: 500;
-    }
-
-    > div {
-      margin-right: 10%;
-      margin-bottom: 20%;
-    }
-    img {
-      margin-bottom: 22%;
-    }
+  &:nth-child(odd) {
+   
   }
 }
