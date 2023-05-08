@@ -1,10 +1,11 @@
 .modal {
     position: fixed;
     background: #fff;
-    width: 50%;
-    height: 425px;
-    top: 25%;
+   
     left: 50%;
+    top: 25%;
+ padding-inline: 20px;
+    bottom: 20%;
     transform: translateX(-50%);
     z-index: 2;
     display: block;
@@ -12,16 +13,21 @@
     text-align: center;
 
     .modal-header {
+
+        display: flex;
+            align-items: center;
+            justify-content: center;
         .logo {
             border: 1px solid #3c3c3c0a;
             border-radius: 50%;
-            height: 280px;
-            width: 280px;
+            height: 15rem;
+            width: 15rem;
             display: flex;
             align-items: center;
             justify-content: center;
             background: #fff;
-            margin: -142px auto 0px;
+            // margin: -162px auto 0px;
+            margin-top: -142px;
             box-shadow: 0px 0px 38px rgba(255,255,255,0.6);
         }
     }
@@ -30,13 +36,13 @@
         h1{
             color: red;
             font-weight: 700;
-            font-size: 38px;
-            margin-bottom: 10px;
+            font-size: 30px;
+           margin-top:-20px ;
         }
     
         small {
             display: block;
-            font-size: 18px;
+            font-size: 15px;
             color: lightgray;
             margin-bottom: 7px;
         }
